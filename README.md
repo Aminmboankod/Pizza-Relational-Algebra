@@ -67,7 +67,9 @@ e) Find all pizzerias that are frequented by only females or only males.
 f) For each person, find all pizzas the person eats that are not served by any pizzeria the person frequents. Return all such person (name) / pizza pairs.
 
 ```
-
+π name, pizza (Eats ⨝ Frequents)
+-
+π name, pizza (Frequents ⨝ Serves)
 ```
 (Amy: mushroom, Dan: mushroom, Gus: mushroom)
 
