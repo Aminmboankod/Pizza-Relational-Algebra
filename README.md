@@ -20,14 +20,14 @@ Verify your answers: [RelaX Calculator](https://dbis-uibk.github.io/relax/landin
 a) Find all pizzerias frequented by at least one person under the age of 18.
 
 ```
-
+π pizzeria (σ age < 18 (Person⨝Frequents))
 ```
 (Straw Hat, New York Pizza, Pizza Hut)
 
 b) Find the names of all females who eat either mushroom or pepperoni pizza (or both).
 
 ```
-
+π name (σ gender='female'∧(pizza='mushroom'∨ pizza='pepperoni')(Person⨝Eats))
 ```
 (Amy, Fay)
 
@@ -35,7 +35,9 @@ b) Find the names of all females who eat either mushroom or pepperoni pizza (or 
 c) Find the names of all females who eat both mushroom and pepperoni pizza.
 
 ```
-
+π name (σ gender='female'∧pizza='mushroom'(Person⨝Eats))
+∩
+π name (σ ender='female'∧pizza='pepperoni'(Person⨝Eats))
 ```
 (Amy)
 
@@ -43,7 +45,7 @@ c) Find the names of all females who eat both mushroom and pepperoni pizza.
 d) Find all pizzerias that serve at least one pizza that Amy eats for less than $10.00.
 
 ```
-
+π pizzeria (σ name='Amy'∧ price < 10 (Serves⨝Eats))
 ```
 (Little Caesars, Straw Hat, New York Pizza)
 
@@ -51,7 +53,13 @@ d) Find all pizzerias that serve at least one pizza that Amy eats for less than 
 e) Find all pizzerias that are frequented by only females or only males.
 
 ```
-
+(π pizzeria (σgender='female'(Frequents⨝Person))
+-
+π pizzeria (σgender='male'(Frequents⨝Person)))
+∪
+(π pizzeria (σgender='male'(Frequents⨝Person))
+-
+π pizzeria (σgender='female'(Frequents⨝Person)))
 ```
 (Little Caesars, Chicago Pizza, New York Pizza)
 
