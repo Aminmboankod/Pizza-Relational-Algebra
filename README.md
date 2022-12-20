@@ -75,7 +75,7 @@ f) For each person, find all pizzas the person eats that are not served by any p
 g) Find the names of all people who frequent only pizzerias serving at least one pizza they eat.
 
 ```
-
+π name (Person) - (π name (Frequents - (π name, pizzeria (Eats ⨝ Serves))))
 ```
 (Amy, Ben, Dan, Eli, Fay, Gus, Hil)
 
