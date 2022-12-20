@@ -82,9 +82,8 @@ g) Find the names of all people who frequent only pizzerias serving at least one
 
 h) Find the names of all people who frequent every pizzeria serving at least one pizza they eat.
 
-
 ```
-
+π name (Person) - (π name ((π name, pizzeria (Eats ⨝ Serves)) - Frequents))
 ```
 (Fay)
 
