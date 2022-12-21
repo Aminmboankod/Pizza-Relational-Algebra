@@ -93,7 +93,7 @@ i) Find the pizzeria serving the cheapest pepperoni pizza. In the case of ties, 
 
 
 ```
-
+π pizzeria (σ pizza='pepperoni' (Serves)) - π Serves.pizzeria (σ Serves.price > Tmp.price ((σ pizza = 'pepperoni' (Serves))⨯ρ Tmp ((σ pizza = 'pepperoni' (Serves)))))
 ```
 (Straw Hat, New York Pizza)
 
