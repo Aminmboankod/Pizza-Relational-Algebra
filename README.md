@@ -35,9 +35,9 @@ b) Find the names of all females who eat either mushroom or pepperoni pizza (or 
 c) Find the names of all females who eat both mushroom and pepperoni pizza.
 
 ```
-π name (σ gender='female'∧pizza='mushroom'(Person⨝Eats))
+π name (σ gender='female'∧ pizza='mushroom'(Person⨝Eats))
 ∩
-π name (σ ender='female'∧pizza='pepperoni'(Person⨝Eats))
+π name (σ gender='female'∧ pizza='pepperoni'(Person⨝Eats))
 ```
 (Amy)
 
